@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import quyenvvph20946.fpl.geoteachapplication.R;
 
-public class VerifyActivity extends AppCompatActivity {
+public class Verify extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
