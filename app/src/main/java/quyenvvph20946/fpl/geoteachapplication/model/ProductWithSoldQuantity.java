@@ -6,6 +6,7 @@ public class ProductWithSoldQuantity {
     @SerializedName("productDetails")
     private ProductDetailsSoldQuantity productDetails;
 
+
     @SerializedName("product_id")
     private String productId;
 
