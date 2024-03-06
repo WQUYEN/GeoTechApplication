@@ -1,4 +1,4 @@
-package quyenvvph20946.fpl.geoteachapplication.view;
+package quyenvvph20946.fpl.geoteachapplication.view.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import quyenvvph20946.fpl.geoteachapplication.MainActivity;
+import quyenvvph20946.fpl.geoteachapplication.view.homescreen.MainActivity;
 import quyenvvph20946.fpl.geoteachapplication.R;
 import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityLoginBinding;
 

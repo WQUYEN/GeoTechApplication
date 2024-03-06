@@ -1,4 +1,4 @@
-package quyenvvph20946.fpl.geoteachapplication.view;
+package quyenvvph20946.fpl.geoteachapplication.view.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
