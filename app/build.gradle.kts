@@ -43,10 +43,28 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    implementation ("com.google.code.gson:gson:2.10.1")
+
     //lottie
 
     implementation ("com.airbnb.android:lottie:5.2.0")
 
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
+
+    // navigation mew
+    implementation ("com.etebarian:meow-bottom-navigation:1.2.0")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
+
+    // jwt
+    implementation ("io.jsonwebtoken:jjwt-api:0.11.2")
+    implementation ("io.jsonwebtoken:jjwt-impl:0.11.2")
+    implementation ("io.jsonwebtoken:jjwt-jackson:0.11.2")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
+
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 }

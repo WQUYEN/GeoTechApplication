@@ -1,4 +1,4 @@
-package quyenvvph20946.fpl.geoteachapplication.view.homescreen;
+package quyenvvph20946.fpl.geoteachapplication.view.fragment.homescreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
