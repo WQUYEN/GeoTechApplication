@@ -20,7 +20,7 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginStart="4dp"
-            android:src="@drawable/avatar"
+            android:src="@drawable/avatar1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
