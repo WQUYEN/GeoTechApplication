@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <item android:state_pressed="false">
         <shape>
             <corners android:radius="10dp" />
@@ -14,4 +15,7 @@
             <stroke android:dashGap="10dp"/>
         </shape>
     </item>
+=======
+
+>>>>>>> b760be47538e305d6a0394e020f65501f0bea83f
 </selector>
