@@ -13,15 +13,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.InfoAdapter;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.ActivityAddressBinding;
-import com.example.hn_2025_online_shop.model.Info;
-import com.example.hn_2025_online_shop.model.response.InfoResponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.InfoInterface;
-import com.example.hn_2025_online_shop.ultil.TAG;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,6 +21,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.adapter.InfoAdapter;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityAddressBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.Info;
+import quyenvvph20946.fpl.geoteachapplication.model.response.InfoResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.InfoInterface;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

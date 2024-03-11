@@ -2,7 +2,10 @@ package quyenvvph20946.fpl.geoteachapplication.model.response;
 
 import com.example.hn_2025_online_shop.model.District;
 
+import java.util.Collection;
 import java.util.List;
+
+import quyenvvph20946.fpl.geoteachapplication.model.District;
 
 public class DistrictResponse {
     private List<District> results;
@@ -17,7 +20,7 @@ public class DistrictResponse {
                 '}';
     }
 
-    public List<District> getResults() {
+    public Collection<? extends District> getResults() {
         return results;
     }
 
