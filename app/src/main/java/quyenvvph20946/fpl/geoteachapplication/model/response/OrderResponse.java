@@ -5,6 +5,8 @@ import com.example.hn_2025_online_shop.model.Order;
 
 import java.util.List;
 
+import quyenvvph20946.fpl.geoteachapplication.model.Order;
+
 public class OrderResponse {
     private int code;
     private String message;
