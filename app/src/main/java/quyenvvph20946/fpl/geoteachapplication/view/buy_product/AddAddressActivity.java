@@ -10,23 +10,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.CityAdapter;
-import com.example.hn_2025_online_shop.adapter.DistrictAdapter;
-import com.example.hn_2025_online_shop.adapter.WardAdapter;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.api.PositionApi;
-import com.example.hn_2025_online_shop.databinding.ActivityAddAddressBinding;
-import com.example.hn_2025_online_shop.model.City;
-import com.example.hn_2025_online_shop.model.District;
-import com.example.hn_2025_online_shop.model.Ward;
-import com.example.hn_2025_online_shop.model.response.CityResponse;
-import com.example.hn_2025_online_shop.model.response.DistrictResponse;
-import com.example.hn_2025_online_shop.model.response.ServerResponse;
-import com.example.hn_2025_online_shop.model.response.WardResponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.ProgressLoadingDialog;
-import com.example.hn_2025_online_shop.ultil.TAG;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +18,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.adapter.CityAdapter;
+import quyenvvph20946.fpl.geoteachapplication.adapter.DistrictAdapter;
+import quyenvvph20946.fpl.geoteachapplication.adapter.WardAdapter;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.api.PositionApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityAddAddressBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.City;
+import quyenvvph20946.fpl.geoteachapplication.model.District;
+import quyenvvph20946.fpl.geoteachapplication.model.Ward;
+import quyenvvph20946.fpl.geoteachapplication.model.response.CityResponse;
+import quyenvvph20946.fpl.geoteachapplication.model.response.DistrictResponse;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ServerResponse;
+import quyenvvph20946.fpl.geoteachapplication.model.response.WardResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
