@@ -17,6 +17,8 @@ import quyenvvph20946.fpl.geoteachapplication.model.HistoryBuy;
 
 public class HistoryBuyAdapter extends RecyclerView.Adapter<HistoryBuyAdapter.ViewHolder> {
     List<HistoryBuy> list;
+
+    
     Context context;
 
 
@@ -33,7 +35,7 @@ public class HistoryBuyAdapter extends RecyclerView.Adapter<HistoryBuyAdapter.Vi
     }
 
 
-    
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         HistoryBuy historyBuy = list.get(position);
