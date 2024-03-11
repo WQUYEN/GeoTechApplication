@@ -32,6 +32,8 @@ public class HistoryBuyAdapter extends RecyclerView.Adapter<HistoryBuyAdapter.Vi
         return new ViewHolder(binding);
     }
 
+
+    
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         HistoryBuy historyBuy = list.get(position);
