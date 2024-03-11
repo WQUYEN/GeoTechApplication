@@ -93,7 +93,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         productList.clear();
         if (query.isEmpty()) {
             productList.addAll(filteredItems);
-
         } else {
             for (Product item : filteredItems) {
                 if (item.getName().toLowerCase().contains(query.toLowerCase())) {
