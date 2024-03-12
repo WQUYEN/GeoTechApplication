@@ -19,31 +19,31 @@
         android:theme="@style/Theme.GeoTeachApplication"
         tools:targetApi="31" >
         <activity
-            android:name=".view.view.cart.CartActivity"
+            android:name=".view.cart.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.ResetPassSuccess"
+            android:name=".view.login.ResetPassSuccess"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.ResetPass"
+            android:name=".view.login.ResetPass"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.Verify"
+            android:name=".view.login.Verify"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.ForgotPass"
+            android:name=".view.login.ForgotPass"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.Register"
+            android:name=".view.login.Register"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.Login"
+            android:name=".view.login.Login"
             android:exported="false" />
         <activity
-            android:name=".view.fragment.homescreen.MainActivity"
+            android:name=".fragment.homescreen.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.view.login.Splash"
+            android:name=".view.login.Splash"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.FragmentProfile"
+    tools:context=".fragment.FragmentProfile"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
