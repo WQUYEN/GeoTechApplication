@@ -1,7 +1,5 @@
 package quyenvvph20946.fpl.geoteachapplication.model.response;
 
-import com.example.hn_2025_online_shop.model.Info;
-
 import java.util.List;
 
 import quyenvvph20946.fpl.geoteachapplication.model.Info;

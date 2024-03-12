@@ -1,8 +1,6 @@
 package quyenvvph20946.fpl.geoteachapplication.model.response;
 
-import com.example.hn_2025_online_shop.model.Ward;
 
-import java.util.Collection;
 import java.util.List;
 
 import quyenvvph20946.fpl.geoteachapplication.model.Ward;
@@ -21,7 +19,7 @@ public class WardResponse {
                 '}';
     }
 
-    public Collection<? extends Ward> getResults() {
+    public List<Ward> getResults() {
         return results;
     }
 

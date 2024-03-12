@@ -1,8 +1,4 @@
 package quyenvvph20946.fpl.geoteachapplication.model.response;
-
-import com.example.hn_2025_online_shop.model.City;
-
-import java.util.Collection;
 import java.util.List;
 
 import quyenvvph20946.fpl.geoteachapplication.model.City;
@@ -20,7 +16,7 @@ public class CityResponse {
                 '}';
     }
 
-    public Collection<? extends City> getResults() {
+    public List<City> getResults() {
         return results;
     }
 
