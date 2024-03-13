@@ -13,8 +13,8 @@ public class JWTUltil {
     public static DataToken decoded(String JWTEncoded) {
         try {
             String [] split = JWTEncoded.split("\\.");
-            Log.d(Tag.toString,"Header:"  + getJson(split[0]));
-            Log.d(Tag.toString,"Header:"  + getJson(split[1]));
+            Log.d(TAG.toString,"Header:"  + getJson(split[0]));
+            Log.d(TAG.toString,"Header:"  + getJson(split[1]));
             Gson gson = new Gson();
             DataToken dataToken = gson.fromJson(getJson(split[1]), DataToken.class);
             return dataToken;

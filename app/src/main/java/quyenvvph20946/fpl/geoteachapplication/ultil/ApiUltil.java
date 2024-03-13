@@ -18,6 +18,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ApiUltil {
+
+
     public static void getDetailUser(Context context,ProgressLoadingDialog loadingDialog) {
         String token = AccountUltil.BEARER + AccountUltil.TOKEN;
         String idUser = JWTUltil.decoded(AccountUltil.TOKEN).getUserId();
@@ -27,7 +29,7 @@ public class ApiUltil {
             public void onResponse(Call<DetailUserReponse> call, Response<DetailUserReponse> response) {
                 if(response.isSuccessful()){ // status 200
                     DetailUserReponse detailUserReponse = response.body();
-                    Log.d(Tag.toString,"OnResponse-DetailProfile:"+detailUserReponse.toString());
+                    Log.d(TAG.toString,"OnResponse-DetailProfile:"+detailUserReponse.toString());
                     if(detailUserReponse.getCode() ==200) {
                         AccountUltil.USER = detailUserReponse.getData();  // lấy data user
                     }
@@ -36,7 +38,7 @@ public class ApiUltil {
                         String errorBody = response.errorBody().string();
                         JSONObject errorJson = new JSONObject(errorBody);
                         String errorMessage = errorJson.getString("message");
-                        Log.d(Tag.toString,"OnResponse-detailProfile"+errorMessage);
+                        Log.d(TAG.toString,"OnResponse-detailProfile"+errorMessage);
                         Toast.makeText(context,errorMessage,Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -50,7 +52,7 @@ public class ApiUltil {
             @Override
             public void onFailure(Call<DetailUserReponse> call, Throwable t) {
                     Toast.makeText(context,t.toString(),Toast.LENGTH_SHORT).show();
-                    Log.d(Tag.toString,"OnFailured-detailProfile" +t.toString());
+                    Log.d(TAG.toString,"OnFailured-detailProfile" +t.toString());
                     loadingDialog.dismiss();
             }
         });
@@ -64,7 +66,7 @@ public class ApiUltil {
             public void onResponse(Call<CartReponse> call, Response<CartReponse> response) {
                 if(response.isSuccessful()) {
                     CartReponse cartReponse = response.body();
-                    Log.d(Tag.toString,"OnResponse-AllCartUser:" +cartReponse.toString());
+                    Log.d(TAG.toString,"OnResponse-AllCartUser:" +cartReponse.toString());
                     if(cartReponse.getCode()== 200) {
                         CartUltil.listCart = cartReponse.getData();
                         if(cartAdapter != null) {
@@ -76,7 +78,7 @@ public class ApiUltil {
                         String errorBody = response.errorBody().string();
                         JSONObject errorJson = new JSONObject(errorBody);
                         String errorMessage = errorJson.getString("message");
-                        Log.d(Tag.toString,"OnResponse-AllCartUser"+errorMessage);
+                        Log.d(TAG.toString,"OnResponse-AllCartUser"+errorMessage);
                         Toast.makeText(context,errorMessage,Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -89,7 +91,7 @@ public class ApiUltil {
             @Override
             public void onFailure(Call<CartReponse> call, Throwable t) {
                 Toast.makeText(context,t.toString(),Toast.LENGTH_SHORT).show();
-                Log.d(Tag.toString,"OnFailured-AllCartUser"+t.toString());
+                Log.d(TAG.toString,"OnFailured-AllCartUser"+t.toString());
             }
         });
     }

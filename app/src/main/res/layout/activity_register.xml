@@ -195,6 +195,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textStyle="bold"
+            android:id="@+id/tvDangNhap"
             android:textColor="@color/color_chudao"
             android:text="Tôi đã có tài khoản? Đăng nhập"
             android:textSize="@dimen/font_size_text"
