@@ -4,7 +4,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -35,7 +34,7 @@ import quyenvvph20946.fpl.geoteachapplication.model.response.LoginResponse;
 import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
 import quyenvvph20946.fpl.geoteachapplication.ultil.ApiUltil;
 import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
-import quyenvvph20946.fpl.geoteachapplication.ultil.Tag;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import quyenvvph20946.fpl.geoteachapplication.ultil.Validator;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -108,7 +107,7 @@ public class Login extends AppCompatActivity {
                         LoginResponse loginResponse = response.body();
                         if(loginResponse.getCode()== 200) {
                             AccountUltil.TOKEN = loginResponse.getToken();
-                            Log.d(Tag.toString,"onResponse-Token : "+AccountUltil.TOKEN);
+                            Log.d(TAG.toString,"onResponse-Token : "+AccountUltil.TOKEN);
                             // đăng nhập t/công lấy ra detail user (có thể tái sử dụng)
                             ApiUltil.getDetailUser(Login.this,null);
                             // lấy d/s cart
@@ -210,7 +209,7 @@ public class Login extends AppCompatActivity {
                             LoginResponse loginResponse =response.body();
                             if(loginResponse.getCode()== 200) {
                                 AccountUltil.TOKEN = loginResponse.getToken();
-                                Log.d(Tag.toString,"Token:" +AccountUltil.TOKEN);
+                                Log.d(TAG.toString,"Token:" +AccountUltil.TOKEN);
 
                                 // Đăng nhập thành công thì lấy ra detail người dùng
                                 ApiUltil.getDetailUser(Login.this,loadingDialog);
