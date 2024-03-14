@@ -2,6 +2,7 @@ package quyenvvph20946.fpl.geoteachapplication.ultil;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -17,7 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ApiUltil {
+public class ApiUtil {
 
 
     public static void getDetailUser(Context context,ProgressLoadingDialog loadingDialog) {
@@ -92,6 +93,40 @@ public class ApiUltil {
             public void onFailure(Call<CartReponse> call, Throwable t) {
                 Toast.makeText(context,t.toString(),Toast.LENGTH_SHORT).show();
                 Log.d(TAG.toString,"OnFailured-AllCartUser"+t.toString());
+            }
+        });
+    }
+    public static void setTitleQuantityCart(Context context, TextView tvQuantityCart) {
+        String token = AccountUltil.BEARER + AccountUltil.TOKEN;
+        BaseApi.API.allCartUser(token).enqueue(new Callback<CartReponse>() {
+            @Override
+            public void onResponse(Call<CartReponse> call, Response<CartReponse> response) {
+                if(response.isSuccessful()){ // chỉ nhận đầu status 200
+                    CartReponse cartReponse = response.body();
+                    Log.d(TAG.toString, "onResponse-allCartUser: " + cartReponse.toString());
+                    if(cartReponse.getCode() == 200) {
+                        CartUltil.listCart = cartReponse.getData();
+                        tvQuantityCart.setText(CartUltil.listCart.size() + "");
+                    }
+                } else { // nhận các đầu status #200
+                    try {
+                        String errorBody = response.errorBody().string();
+                        JSONObject errorJson = new JSONObject(errorBody);
+                        String errorMessage = errorJson.getString("message");
+                        Log.d(TAG.toString, "onResponse-allCartUser: " + errorMessage);
+                        Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show();
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<CartReponse> call, Throwable t) {
+                Toast.makeText(context, t.toString(), Toast.LENGTH_SHORT).show();
+                Log.d(TAG.toString, "onFailure-allCartUser: " + t.toString());
             }
         });
     }

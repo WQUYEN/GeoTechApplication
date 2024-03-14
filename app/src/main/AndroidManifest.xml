@@ -20,6 +20,24 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".view.buy_product.PayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.product_screen.CommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.product_screen.DetailProduct"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.ShowAllProductByCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.chat_message.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.find_product.FindProduct"
+            android:exported="false" />
+        <activity
             android:name=".view.login.RegisterSuccess"
             android:exported="false" />
         <activity
