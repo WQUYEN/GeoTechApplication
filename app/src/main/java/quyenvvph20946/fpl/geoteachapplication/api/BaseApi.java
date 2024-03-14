@@ -20,6 +20,7 @@ import quyenvvph20946.fpl.geoteachapplication.model.response.ListNotifiReponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.LoginResponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.OrderResponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.ProductBestSellerResponse;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ProductByCategoryReponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.ProductResponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.ProductTypeResponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.ServerResponse;
@@ -106,7 +107,7 @@ public interface BaseApi {
 
 
     @GET("products/all-product-by-category")
-    Call<ProductByCategory> getListProductByCategory(@Query("token") String token);
+    Call<ProductByCategoryReponse> getListProductByCategory(@Query("token") String token);
 
     @GET("category/get-list")
     Call<ProductTypeResponse> getListTypeProduct();

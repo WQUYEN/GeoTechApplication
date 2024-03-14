@@ -32,7 +32,7 @@ import quyenvvph20946.fpl.geoteachapplication.R;
 import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityLoginBinding;
 import quyenvvph20946.fpl.geoteachapplication.model.response.LoginResponse;
 import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
-import quyenvvph20946.fpl.geoteachapplication.ultil.ApiUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ApiUtil;
 import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
 import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import quyenvvph20946.fpl.geoteachapplication.ultil.Validator;
@@ -109,9 +109,9 @@ public class Login extends AppCompatActivity {
                             AccountUltil.TOKEN = loginResponse.getToken();
                             Log.d(TAG.toString,"onResponse-Token : "+AccountUltil.TOKEN);
                             // đăng nhập t/công lấy ra detail user (có thể tái sử dụng)
-                            ApiUltil.getDetailUser(Login.this,null);
+                            ApiUtil.getDetailUser(Login.this,loadingDialog);
                             // lấy d/s cart
-                            ApiUltil.getAllCart(Login.this,null);
+                            ApiUtil.getAllCart(Login.this,null);
                             Toast.makeText(Login.this,"Đăng nhập thành công",Toast.LENGTH_SHORT).show();
                             screenSwitch(Login.this,MainActivity.class);
                             finishAffinity();
@@ -212,13 +212,13 @@ public class Login extends AppCompatActivity {
                                 Log.d(TAG.toString,"Token:" +AccountUltil.TOKEN);
 
                                 // Đăng nhập thành công thì lấy ra detail người dùng
-                                ApiUltil.getDetailUser(Login.this,loadingDialog);
+                                ApiUtil.getDetailUser(Login.this,loadingDialog);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putString("TOKENGG",idToken);
                                 editor.commit();
 
                                 // Lấy d/s cart
-                                ApiUltil.getAllCart(Login.this,null);
+                                ApiUtil.getAllCart(Login.this,null);
                                 Toast.makeText(Login.this,"Đăng nhập thành công",Toast.LENGTH_SHORT).show();
                                 screenSwitch(Login.this,MainActivity.class);
                                 finishAffinity();

@@ -76,4 +76,9 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("com.github.PhilJay:MPAndroidChart:v3.0.2")
 
+    // socket
+    implementation ("io.socket:socket.io-client:2.0.0") {
+//        exclude group: 'org.json', module: 'json'
+    }
+
 }
