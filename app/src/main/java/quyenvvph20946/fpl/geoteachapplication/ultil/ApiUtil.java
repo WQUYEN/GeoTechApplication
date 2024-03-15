@@ -69,9 +69,9 @@ public class ApiUtil {
                     CartReponse cartReponse = response.body();
                     Log.d(TAG.toString,"OnResponse-AllCartUser:" +cartReponse.toString());
                     if(cartReponse.getCode()== 200) {
-                        CartUltil.listCart = cartReponse.getData();
+                        CartUtil.listCart = cartReponse.getData();
                         if(cartAdapter != null) {
-                            cartAdapter.setListCart(CartUltil.listCart);
+                            cartAdapter.setListCart(CartUtil.listCart);
                         }
                     }
                 } else {
@@ -105,8 +105,8 @@ public class ApiUtil {
                     CartReponse cartReponse = response.body();
                     Log.d(TAG.toString, "onResponse-allCartUser: " + cartReponse.toString());
                     if(cartReponse.getCode() == 200) {
-                        CartUltil.listCart = cartReponse.getData();
-                        tvQuantityCart.setText(CartUltil.listCart.size() + "");
+                        CartUtil.listCart = cartReponse.getData();
+                        tvQuantityCart.setText(CartUtil.listCart.size() + "");
                     }
                 } else { // nhận các đầu status #200
                     try {

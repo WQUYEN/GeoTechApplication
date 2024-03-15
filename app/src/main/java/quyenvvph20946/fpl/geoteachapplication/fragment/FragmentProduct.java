@@ -35,7 +35,7 @@ import quyenvvph20946.fpl.geoteachapplication.model.Product;
 import quyenvvph20946.fpl.geoteachapplication.model.response.BannerReponse;
 import quyenvvph20946.fpl.geoteachapplication.model.response.ProductResponse;
 import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
-import quyenvvph20946.fpl.geoteachapplication.ultil.CartUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.CartUtil;
 import quyenvvph20946.fpl.geoteachapplication.ultil.ObjectUtil;
 import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import quyenvvph20946.fpl.geoteachapplication.view.cart.CartActivity;
@@ -87,7 +87,7 @@ public class FragmentProduct extends Fragment implements ObjectUtil {
 
     private void setNumberCart() {
         // Lấy danh sách cart
-        binding.tvQuantityCart.setText(CartUltil.listCart.size() + "");
+        binding.tvQuantityCart.setText(CartUtil.listCart.size() + "");
     }
     private void callApiBanner() {
         BaseApi.API.getListBanner().enqueue(new Callback<BannerReponse>() {
