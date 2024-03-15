@@ -21,7 +21,7 @@ import java.util.List;
 import quyenvvph20946.fpl.geoteachapplication.R;
 import quyenvvph20946.fpl.geoteachapplication.model.OptionAndQuantity;
 import quyenvvph20946.fpl.geoteachapplication.ultil.CartInterface;
-import quyenvvph20946.fpl.geoteachapplication.ultil.CartUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.CartUtil;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
     private Context context;
@@ -46,10 +46,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         return new CartViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         OptionAndQuantity cart = listCart.get(position);
-        if(cart==null) {
+        if(cart == null) {
             return;
         }
         holder.tvName.setText(cart.getOptionProduct().getProduct().getName());
@@ -80,10 +81,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked==true) {
-                    CartUltil.listCartCheck.add(cart);
+                    CartUtil.listCartCheck.add(cart);
                     cartInterface.setTotalPrice();
                 } else {
-                    CartUltil.listCartCheck.remove(cart);
+                    CartUtil.listCartCheck.remove(cart);
                     cartInterface.setTotalPrice();
                 }
             }
