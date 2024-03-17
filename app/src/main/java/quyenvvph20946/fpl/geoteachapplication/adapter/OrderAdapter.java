@@ -78,6 +78,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
                 objectUtil.onclickObject(order);
             }
         });
+
+        // Kiểm tra xem danh sách có nhiều hơn số lượng hiển thị ban đầu hay không
     }
 
     private void setRcvProduct(LayoutItemOrderBinding binding, Order order) {
