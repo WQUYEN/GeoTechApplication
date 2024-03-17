@@ -27,7 +27,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     private OrderProductAdapter orderProductAdapter;
     private ObjectUtil objectUtil;
     private int status = 0; // 1, 2, 3, 4 ứng với thứ tự hiển thị trên tab
+    private int maxVisibleItems = 2; // Số lượng sản phẩm hiển thị ban đầu
 
+    private boolean isExpanded = false;//Lưu trữ trạng thái hiện tại của danh sách
     public OrderAdapter( Context context, List<Order> orderList, ObjectUtil objectUtil, int status) {
         this.context = context;
         this.orderList = orderList;
