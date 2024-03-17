@@ -5,7 +5,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.databinding.StartRegisterMemberSellerBinding;
+import quyenvvph20946.fpl.geoteachapplication.databinding.StartRegisterMemberSellerBinding;
+
 
 public class StartRegisterMemberSeller extends AppCompatActivity {
     private StartRegisterMemberSellerBinding binding;

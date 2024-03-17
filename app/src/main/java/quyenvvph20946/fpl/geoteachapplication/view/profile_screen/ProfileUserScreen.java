@@ -1,46 +1,46 @@
 package quyenvvph20946.fpl.geoteachapplication.view.profile_screen;
 
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.LayoutProfileUserBinding;
-import com.example.hn_2025_online_shop.model.response.ServerResponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.ApiUtil;
-import com.example.hn_2025_online_shop.ultil.ProgressLoadingDialog;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.home_screen.MainActivity;
-import com.github.dhaval2404.imagepicker.ImagePicker;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.LayoutProfileUserBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ServerResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ApiUtil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
+import quyenvvph20946.fpl.geoteachapplication.view.home_screen.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

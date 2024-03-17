@@ -62,6 +62,7 @@ public class OrderProductScreen extends AppCompatActivity {
             public void onClick(View v) {
                 finish();
                 overridePendingTransition(R.anim.slidle_in_right, R.anim.slidle_out_right);
+
             }
         });
     }

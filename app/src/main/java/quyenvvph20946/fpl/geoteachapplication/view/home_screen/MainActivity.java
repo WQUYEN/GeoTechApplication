@@ -7,13 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-//import com.example.hn_2025_online_shop.R;
-//import com.example.hn_2025_online_shop.databinding.ActivityMainBinding;
-//import com.example.hn_2025_online_shop.view.fragment.FragmentNotification;
-//import com.example.hn_2025_online_shop.view.fragment.FragmentProduct;
-//import com.example.hn_2025_online_shop.view.fragment.FragmentProfile;
-//import com.example.hn_2025_online_shop.view.fragment.fragment_home.FragmentHome;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;

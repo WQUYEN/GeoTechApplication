@@ -1,23 +1,6 @@
 package quyenvvph20946.fpl.geoteachapplication.view.fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.ProductFavoriteAdapter;
-import com.example.hn_2025_online_shop.databinding.FragmentFavoriteBinding;
-import com.example.hn_2025_online_shop.model.ProductFind;
-import com.example.hn_2025_online_shop.view.chat_message.ChatActivity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class FragmentFavorite extends Fragment {
     private FragmentFavoriteBinding binding;

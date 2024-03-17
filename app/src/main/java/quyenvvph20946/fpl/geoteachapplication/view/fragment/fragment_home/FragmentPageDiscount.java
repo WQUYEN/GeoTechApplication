@@ -1,39 +1,24 @@
 package quyenvvph20946.fpl.geoteachapplication.view.fragment.fragment_home;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.ProductSaleAdapter;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.FragmentPageDiscountBinding;
-import com.example.hn_2025_online_shop.model.Product;
-import com.example.hn_2025_online_shop.model.response.ProductResponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.ObjectUtil;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.product_screen.DetailProduct;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import quyenvvph20946.fpl.geoteachapplication.databinding.FragmentPageDiscountBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.Product;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ProductResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ObjectUtil;
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 
 public class FragmentPageDiscount extends Fragment implements ObjectUtil {
     private List<Product> list;

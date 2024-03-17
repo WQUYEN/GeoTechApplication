@@ -5,9 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.hn_2025_online_shop.view.fragment.fragment_home.FragementPageSelling;
-import com.example.hn_2025_online_shop.view.fragment.fragment_home.FragmentPageDiscount;
-import com.example.hn_2025_online_shop.view.fragment.fragment_home.FragmentPageOutstanding;
+import quyenvvph20946.fpl.geoteachapplication.view.fragment.fragment_home.FragementPageSelling;
+import quyenvvph20946.fpl.geoteachapplication.view.fragment.fragment_home.FragmentPageDiscount;
+import quyenvvph20946.fpl.geoteachapplication.view.fragment.fragment_home.FragmentPageOutstanding;
+
 
 public class ViewPageHomeAdapter extends FragmentStateAdapter {
 

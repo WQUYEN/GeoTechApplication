@@ -5,8 +5,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.databinding.ActivityRegisterSuccessBinding;
-import com.example.hn_2025_online_shop.view.login.Login;
+import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityRegisterSuccessBinding;
+import quyenvvph20946.fpl.geoteachapplication.view.login.Login;
+
 
 public class RegisterSuccess extends AppCompatActivity {
     ActivityRegisterSuccessBinding binding;

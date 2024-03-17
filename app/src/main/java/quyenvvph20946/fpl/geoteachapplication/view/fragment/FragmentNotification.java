@@ -13,16 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.NotificationAdapter;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.FragmentNotificationBinding;
-import com.example.hn_2025_online_shop.model.Notifi;
-import com.example.hn_2025_online_shop.model.response.ListNotifiReponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.NotificationUtil;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.chat_message.ChatActivity;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,6 +27,14 @@ import java.util.List;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.FragmentNotificationBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.Notifi;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ListNotifiReponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.NotificationUtil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -1,8 +1,11 @@
 package quyenvvph20946.fpl.geoteachapplication.view.fragment.fragment_home;
 
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,23 +16,8 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.denzcoskun.imageslider.constants.ScaleTypes;
-import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.page_view.ViewPageHomeAdapter;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.FragmentHomeBinding;
-import com.example.hn_2025_online_shop.model.Banner;
-import com.example.hn_2025_online_shop.model.response.BannerReponse;
-import com.example.hn_2025_online_shop.ultil.ApiUtil;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.cart_screen.CartActivity;
-import com.example.hn_2025_online_shop.view.chat_message.ChatActivity;
-import com.example.hn_2025_online_shop.view.find_product.FindProduct;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -40,6 +28,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.adapter.page_view.ViewPageHomeAdapter;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.FragmentHomeBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.Banner;
+import quyenvvph20946.fpl.geoteachapplication.model.response.BannerReponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ApiUtil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
+import quyenvvph20946.fpl.geoteachapplication.view.cart_screen.CartActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

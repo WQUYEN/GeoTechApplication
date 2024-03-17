@@ -1,30 +1,17 @@
 package quyenvvph20946.fpl.geoteachapplication.view.login;
 
+
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.VerifiPassBinding;
-import com.example.hn_2025_online_shop.model.response.ServerResponse;
-import com.example.hn_2025_online_shop.ultil.ProgressLoadingDialog;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.success_screen.RegisterSuccess;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.VerifiPassBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ServerResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
 
 public class VerifiPassWord extends AppCompatActivity {
     private VerifiPassBinding binding;

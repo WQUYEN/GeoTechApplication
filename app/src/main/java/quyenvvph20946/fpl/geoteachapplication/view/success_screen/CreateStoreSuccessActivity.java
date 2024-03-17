@@ -1,13 +1,14 @@
 package quyenvvph20946.fpl.geoteachapplication.view.success_screen;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.databinding.ActivityCreateStoreSuccessBinding;
-import com.example.hn_2025_online_shop.view.home_screen.MainActivity;
+import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityCreateStoreSuccessBinding;
+import quyenvvph20946.fpl.geoteachapplication.view.home_screen.MainActivity;
 
 public class CreateStoreSuccessActivity extends AppCompatActivity {
     ActivityCreateStoreSuccessBinding binding;

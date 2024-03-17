@@ -7,7 +7,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.databinding.ResetPassSuccessBinding;
+import quyenvvph20946.fpl.geoteachapplication.databinding.ResetPassSuccessBinding;
+
 
 public class ResetPassWordSuccess extends AppCompatActivity {
     ImageView backResetsuccess;

@@ -25,20 +25,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+
 import com.bumptech.glide.Glide;
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.FragmentProfileBinding;
-import com.example.hn_2025_online_shop.databinding.LayoutDialogFeedbackBinding;
-import com.example.hn_2025_online_shop.databinding.LayoutDialogLogoutBinding;
-import com.example.hn_2025_online_shop.model.response.ServerResponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.ProgressLoadingDialog;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.login.Login;
-import com.example.hn_2025_online_shop.view.login.ResetPassWord;
-import com.example.hn_2025_online_shop.view.profile_screen.OrderProductScreen;
-import com.example.hn_2025_online_shop.view.profile_screen.ProfileUserScreen;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -48,6 +36,19 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.FragmentProfileBinding;
+import quyenvvph20946.fpl.geoteachapplication.databinding.LayoutDialogFeedbackBinding;
+import quyenvvph20946.fpl.geoteachapplication.databinding.LayoutDialogLogoutBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ServerResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
+import quyenvvph20946.fpl.geoteachapplication.view.login.Login;
+import quyenvvph20946.fpl.geoteachapplication.view.login.ResetPassWord;
+import quyenvvph20946.fpl.geoteachapplication.view.profile_screen.OrderProductScreen;
+import quyenvvph20946.fpl.geoteachapplication.view.profile_screen.ProfileUserScreen;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -1,39 +1,38 @@
 
 package quyenvvph20946.fpl.geoteachapplication.view.fragment.fragment_home;
 
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.ProductBestSellerAdapter;
-import com.example.hn_2025_online_shop.api.BaseApi;
-import com.example.hn_2025_online_shop.databinding.FragmentPageOutstandingBinding;
-import com.example.hn_2025_online_shop.model.OptionProductBestSeller;
-import com.example.hn_2025_online_shop.model.response.ProductBestSellerResponse;
-import com.example.hn_2025_online_shop.ultil.AccountUltil;
-import com.example.hn_2025_online_shop.ultil.ObjectUtil;
-import com.example.hn_2025_online_shop.ultil.TAG;
-import com.example.hn_2025_online_shop.view.product_screen.DetailProduct;
+import com.google.android.gms.common.api.Response;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.api.BaseApi;
+import quyenvvph20946.fpl.geoteachapplication.databinding.FragmentPageOutstandingBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.OptionProductBestSeller;
+
+import quyenvvph20946.fpl.geoteachapplication.model.response.ProductBestSellerResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.AccountUltil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ObjectUtil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.TAG;
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
 public class FragmentPageOutstanding extends Fragment implements ObjectUtil {
     private List<OptionProductBestSeller> list;

@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.hn_2025_online_shop.view.my_store.OrderStore.fragment.FragmentPageCancelledStore;
-import com.example.hn_2025_online_shop.view.my_store.OrderStore.fragment.FragmentPageConfirmStore;
-import com.example.hn_2025_online_shop.view.my_store.OrderStore.fragment.FragmentPageDeliveredStore;
-import com.example.hn_2025_online_shop.view.my_store.OrderStore.fragment.FragmentPageWaitingDeliveryStore;
+
 
 public class ViewPageOrderStoreAdapter extends FragmentStateAdapter {
     public ViewPageOrderStoreAdapter(@NonNull FragmentActivity fragmentActivity) {

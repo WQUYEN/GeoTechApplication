@@ -7,18 +7,16 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hn_2025_online_shop.R;
-import com.example.hn_2025_online_shop.adapter.ProductAdapter;
-import com.example.hn_2025_online_shop.databinding.ActivityShowAllProductByCategoryBinding;
-import com.example.hn_2025_online_shop.model.Product;
-import com.example.hn_2025_online_shop.model.ProductByCategory;
-import com.example.hn_2025_online_shop.model.response.ProductResponse;
-import com.example.hn_2025_online_shop.ultil.ObjectUtil;
-import com.example.hn_2025_online_shop.ultil.ProgressLoadingDialog;
-import com.example.hn_2025_online_shop.view.product_screen.DetailProduct;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import quyenvvph20946.fpl.geoteachapplication.R;
+import quyenvvph20946.fpl.geoteachapplication.databinding.ActivityShowAllProductByCategoryBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.Product;
+import quyenvvph20946.fpl.geoteachapplication.model.ProductByCategory;
+import quyenvvph20946.fpl.geoteachapplication.model.response.ProductResponse;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ObjectUtil;
+import quyenvvph20946.fpl.geoteachapplication.ultil.ProgressLoadingDialog;
 
 public class ShowAllProductByCategoryActivity extends AppCompatActivity implements ObjectUtil {
     ActivityShowAllProductByCategoryBinding binding;
