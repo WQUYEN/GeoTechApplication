@@ -81,4 +81,6 @@ dependencies {
 //        exclude group: 'org.json', module: 'json'
     }
 
+    implementation ("com.github.dhaval2404:imagepicker:2.1")
+
 }
