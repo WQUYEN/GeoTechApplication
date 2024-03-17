@@ -1,13 +1,10 @@
 package quyenvvph20946.fpl.geoteachapplication.view.voucher;
 
+
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-//
-//import com.example.hn_2025_online_shop.adapter.VoucherSCAdapter;
-//import com.example.hn_2025_online_shop.databinding.LayoutVoucherBinding;
-//import com.example.hn_2025_online_shop.model.Voucher;
 
 import java.util.ArrayList;
 import java.util.List;
