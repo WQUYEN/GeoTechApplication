@@ -2,6 +2,7 @@ package quyenvvph20946.fpl.geoteachapplication.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 import quyenvvph20946.fpl.geoteachapplication.databinding.LayoutItemOrderBinding;
+import quyenvvph20946.fpl.geoteachapplication.model.OptionAndQuantity;
 import quyenvvph20946.fpl.geoteachapplication.model.Order;
 import quyenvvph20946.fpl.geoteachapplication.ultil.ObjectUtil;
 
@@ -53,7 +55,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     @Override
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
         Order order = orderList.get(position);
-        setRcvProduct(holder.binding, order);
         holder.binding.tvOrderId.setText("Đơn hàng: " + order.getId());
         DecimalFormat df = new DecimalFormat("###,###,###");
         holder.binding.tvTotalPrice.setText(df.format(order.getTotalPrice()) + "");
@@ -80,10 +81,45 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         });
 
         // Kiểm tra xem danh sách có nhiều hơn số lượng hiển thị ban đầu hay không
+        if (order.getProductsOrder().size() > maxVisibleItems && !isExpanded) {
+            // Hiển thị chỉ 2 mục đầu tiên
+            setRcvProduct(holder.binding, order, maxVisibleItems);
+
+            holder.binding.tvSeeMore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Đảo ngược trạng thái isExpanded
+                    isExpanded = !isExpanded;
+                    Log.d("Expanded status", "onClick Seemore: " + isExpanded);
+                    // Hiển thị toàn bộ danh sách sản phẩm nếu isExpanded là true, ngược lại hiển thị chỉ 2 mục đầu tiên
+                    if (!isExpanded) {
+                        setRcvProduct(holder.binding, order, order.getProductsOrder().size());
+                        holder.binding.tvSeeMore.setText("Thu gọn");
+
+
+                    } else {
+//                        setRcvProduct(holder.binding, order, maxVisibleItems);
+//                        holder.binding.tvSeeMore.setText("Xem thêm");
+                        setRcvProduct(holder.binding, order, maxVisibleItems);
+                        holder.binding.tvSeeMore.setText("Xem thêm");
+
+                    }
+                    // Cập nhật giao diện
+                    // notifyItemChanged(holder.getAdapterPosition());
+                }
+            });
+        } else {
+            //Ds sản phẩm <2 hiển thị toàn bộ sản phẩm và ẩn nút xem thêm
+            holder.binding.tvSeeMore.setVisibility(View.GONE);
+            setRcvProduct(holder.binding, order, order.getProductsOrder().size());
+        }
     }
 
-    private void setRcvProduct(LayoutItemOrderBinding binding, Order order) {
-        orderProductAdapter = new OrderProductAdapter(context, order.getProductsOrder());
+    private void setRcvProduct(LayoutItemOrderBinding binding, Order order, int maxVisibleItems) {
+        List<OptionAndQuantity> productList = order.getProductsOrder();
+        List<OptionAndQuantity> visibleProducts = productList.subList(0, Math.min(productList.size(), maxVisibleItems));
+
+        OrderProductAdapter orderProductAdapter = new OrderProductAdapter(context, visibleProducts);
         LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         binding.rcvOrderDetail.setLayoutManager(layoutManager);
         binding.rcvOrderDetail.setAdapter(orderProductAdapter);
