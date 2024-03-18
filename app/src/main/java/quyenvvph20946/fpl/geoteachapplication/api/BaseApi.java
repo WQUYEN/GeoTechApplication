@@ -56,7 +56,7 @@ public interface BaseApi {
 //    String LOCALHOT = "103.166.183.57"; // đc cho socket
 //    192.168.100.4
     // 192.168.1.109
-    String LOCALHOT = "192.168.1.109"; // đc cho socket
+    String LOCALHOT = "192.168.11.106"; // đc cho socket
     //    String LOCALHOT = "172.20.10.3"; // đc cho socket
     BaseApi API = new Retrofit.Builder()
             .baseUrl("http://" + LOCALHOT + ":3000/api/")
